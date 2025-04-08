@@ -1,0 +1,22 @@
+bot:
+  token: ""
+  # note: please keep in mind that default logger may expose sensitive information, use in development only.
+  debug: true
+  mode: "polling" # "polling" or "webhook"
+
+  # https://core.telegram.org/bots/api#getupdates
+  polling:
+    offset: 0
+    limit: 100
+    timeout: 0
+
+  # https://core.telegram.org/bots/api#setwebhook
+  webhook:
+    url: "" # with path
+    port: 8080 # port for webhook server
+    max_conn: 40
+    drop_pending_updates: false # pass true to drop all pending updates
+    ssl:
+      enabled: false
+      cert: ""
+      key: ""
